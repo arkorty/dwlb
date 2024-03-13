@@ -16,6 +16,9 @@ install: all
 	install -D -t $(PREFIX)/bin $(BINS)
 	install -D -m0644 -t $(PREFIX)/share/man/man1 $(MANS)
 
+uninstall:
+	rm -f $(PREFIX)/bin/$(BINS) $(PREFIX)/share/man/man1/$(MANS)
+
 WAYLAND_PROTOCOLS=$(shell pkg-config --variable=pkgdatadir wayland-protocols)
 WAYLAND_SCANNER=$(shell pkg-config --variable=wayland_scanner wayland-scanner)
 
