@@ -2,7 +2,7 @@ BINS = dwlb
 MANS = dwlb.1
 
 PREFIX ?= /usr/local
-CFLAGS += -Wall -Wextra -Wno-unused-parameter -Wno-format-truncation -g
+CFLAGS += -Wall -Wextra -Wno-unused-parameter -Wno-format-truncation -g -I/usr/include/pixman-1/
 
 all: $(BINS)
 
